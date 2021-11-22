@@ -175,12 +175,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 106px 0 0;
+    margin: 0 106px 0 36px;
 }
 
 .header__socialList .header__socialList-c {
     display: flex;
-    margin-bottom: 8px;
 }
 
 .header_socialDesc {
@@ -193,6 +192,9 @@ body {
     flex-direction: column;
     align-items: center;
     transition: .3s;
+    background: rgba(255, 255, 255, 0.37);
+    border-radius: 14px;
+    padding: 10px 20px;
 }
 
 .header__phoneBlock:hover {
@@ -217,7 +219,7 @@ body {
     width: 25px;
     height: 25px;
     transition: 0.3s;
-    margin-right: 25px;
+    margin-right: 20px;
     transition: .3s ease;
 }
 
@@ -235,9 +237,26 @@ body {
     width: 25px;
     height: 25px;
     transition: 0.3s;
+    margin-right: 20px;
 }
 
 .header__feedback-whatsapp:hover {
+    transform: scale(1.05);
+}
+
+.header__feedback-telegram {
+    display: block;
+    background-image: url("../images/icons/telegram_icon.svg");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    transition: 0.3s;
+}
+
+.header__feedback-telegram:hover {
     transform: scale(1.05);
 }
 
@@ -375,7 +394,7 @@ body {
 .partitions__btn {
     margin-top: 30px;
     grid-area: button;
-    color: #404148;
+    color: #ffffff;
     font-family: "Montserrat";
     font-size: 18px;
     font-weight: 600;
@@ -391,6 +410,12 @@ body {
     transition: 0.3s;
 }
 
+.partitions__btn.PopupCallMe {
+    border-radius: 6px;
+    background: rgba(37, 186, 74, 0.59);
+    backdrop-filter: blur(20px);
+}
+
 .partitions__btn:hover {
     box-shadow: 0 0 20px rgba(54, 56, 74, 0.2);
     background-color: #404148;
@@ -402,8 +427,8 @@ body {
     grid-area: main-button;
     padding: 20px 50px 21px;
     font-weight: 700;
-    background-color: #404148;
-    color: #fff;
+    background: rgba(189, 52, 58, 0.9);
+    border-radius: 49.0385px;
     margin-left: 40px;
 }
 
