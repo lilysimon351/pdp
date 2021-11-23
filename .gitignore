@@ -1,0 +1,11 @@
+# PhpStorm
+.idea
+
+# VSCode
+.vscode
+
+# Windows thumbnails cache
+Thumbs.db
+
+# some macOS cache
+.DS_Store

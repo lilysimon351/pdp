@@ -12,24 +12,37 @@
         }
     });
 
+    const viewsSwiper = new Swiper('.views__swiper', {
+        speed: 400,
+        spaceBetween: 150,
+        navigation: false,
+        pagination: {
+            el: '.views__pagination',
+            type: 'bullets',
+            clickable: true
+        }
+    });
+
     this.changeHeader();
 
     window.addEventListener('scroll', () => {
         this.changeHeader();
     });
 
-    $("body").on("click", "a", function(event) {
-        if(!$(this).attr('target')){
+    $("body").on("click", "a", function (event) {
+        if (!$(this).attr('target')) {
             event.preventDefault();
             var id = $(this).attr('href'),
                 top = $(id).offset().top;
-            $('body,html').animate({ scrollTop: top - 50 }, 500);
-        }else if($(this).attr('target') == '_blank'){
+            $('body,html').animate({
+                scrollTop: top - 50
+            }, 500);
+        } else if ($(this).attr('target') == '_blank') {
 
         }
     });
 
-    $('*[popup-open]').click(function() {
+    $('*[popup-open]').click(function () {
         popup = $(this).attr('popup-open');
         if (typeof popup != 'undefined') {
             arr = popup.split(',');
@@ -40,13 +53,13 @@
         }
     });
 
-    $('.views__content').on('click', '.swiper-slide-picture', function() {
-        if(document.documentElement.clientWidth > 768){
+    $('.views__content').on('click', '.swiper-slide-picture', function () {
+        if (document.documentElement.clientWidth > 768) {
             prewStart($(this));
         }
     });
 
-    $('.PopupWindow .PhotoPrew').on('click', '.button', function() {
+    $('.PopupWindow .PhotoPrew').on('click', '.button', function () {
         if ($(this).hasClass('button-next')) {
             nextSlidePrewPhoto();
         } else {
@@ -54,12 +67,12 @@
         }
     });
 
-    $('.popup').on('click', '.button-close', function(e){
+    $('.popup').on('click', '.button-close', function (e) {
         $(this).parent().parent().removeClass('visible');
         $(this).parent().parent().parent().removeClass('visible');
     });
 
-    $('.send-form .btn.submit').click(function() {
+    $('.send-form .btn.submit').click(function () {
         phone = $(this).parent().parent().find('input[name="phone"]').val();
         username = $(this).parent().parent().find('input[name="username"]').val();
         time = $(this).parent().parent().find('input[name="time"]').val();
@@ -107,7 +120,7 @@ function viewErr(block) {
         clearTimeout(pauseViewErr);
     }
     $(block).addClass('error');
-    pauseViewErr = setTimeout(function() {
+    pauseViewErr = setTimeout(function () {
         $(block).parent().find('input').removeClass('error');
     }, 1000);
 }
@@ -126,7 +139,9 @@ function prevSlidePrewPhoto() {
     $('.PopupWindow .PhotoPrew').attr({
         'data-slide': nextSlide
     });
-    $('.PopupWindow .PhotoPrew .content_box img').attr({ 'src': src });
+    $('.PopupWindow .PhotoPrew .content_box img').attr({
+        'src': src
+    });
 }
 
 function nextSlidePrewPhoto() {
@@ -143,7 +158,9 @@ function nextSlidePrewPhoto() {
     $('.PopupWindow .PhotoPrew').attr({
         'data-slide': nextSlide
     });
-    $('.PopupWindow .PhotoPrew .content_box img').attr({ 'src': src });
+    $('.PopupWindow .PhotoPrew .content_box img').attr({
+        'src': src
+    });
 }
 
 function prewStart(block) {
@@ -154,7 +171,9 @@ function prewStart(block) {
         'data-slide': index,
         'data-id': id
     });
-    $('.PopupWindow .PhotoPrew .content_box img').attr({ 'src': src });
+    $('.PopupWindow .PhotoPrew .content_box img').attr({
+        'src': src
+    });
     $('.PopupWindow').addClass('visible');
     $('.PopupWindow .PhotoPrew').addClass('visible');
 }
@@ -194,7 +213,7 @@ function send_form(dataForm) {
             'action': 'sendEmail',
             'data': dataForm
         },
-        success: function(msg) {
+        success: function (msg) {
             if (msg == true) {
                 window.location.href = "https://pdpufa.ru/thanks.html";
                 /* $('.popup').removeClass('visible');
