@@ -1,16 +1,4 @@
 (() => {
-    const swiper = new Swiper('.swiper', {
-        speed: 400,
-        spaceBetween: 150,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-        }
-    });
 
     const viewsSwiper = new Swiper('.views__swiper', {
         speed: 400,
@@ -21,6 +9,89 @@
             type: 'bullets',
             clickable: true
         }
+    });
+
+    const advantagesSwiper = new Swiper('.advantages__swiper', {
+        speed: 400,
+        spaceBetween: 15,
+        slidesPerView: 3,
+        navigation: {
+            nextEl: '.advantages__next',
+            prevEl: '.advantages__prev'
+        },
+        pagination: false,
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                pagination: false
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 40
+            },
+            1110: {
+                slidesPerView: 3,
+                spaceBetween: 15
+            }
+        }
+    });
+
+    const casesSwiper = new Swiper('.cases__swiper', {
+        speed: 400,
+        spaceBetween: 0,
+        slidesPerView: 1,
+        effect: "fade",
+        draggable: true,
+        fadeEffect: { crossFade: true },
+        navigation: {
+            nextEl: '.cases__next',
+            prevEl: '.cases__prev'
+        },
+        pagination: {
+            el: '.cases__pagination',
+            type: 'bullets',
+            clickable: true
+        }
+    });
+
+    const reviewesSwiper = new Swiper('.reviewes__swiper', {
+        speed: 400,
+        navigation: false,
+        pagination: {
+            el: '.reviewes__pagination',
+            type: 'bullets',
+            clickable: true
+        },
+
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+            },
+            800: {
+                slidesPerView: 2,
+                spaceBetween: 0
+            },
+            1100: {
+
+                centeredSlides: true,
+                spaceBetween: 40,
+                slidesPerView: 3,
+            }
+        }
+    });
+
+
+    const videoSwiper = new Swiper('.video_swiper', {
+        speed: 400,
+        spaceBetween: 0,
+        slidesPerView: 1,
+        navigation: {
+            nextEl: '.video__next',
+            prevEl: '.video__prev'
+        },
+        pagination: false
     });
 
     this.changeHeader();

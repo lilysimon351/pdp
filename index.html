@@ -135,6 +135,29 @@
                     <span>Перегородки и двери<br>для дома и офиса</span>
                 </div>
             </div>
+            <nav class="nav header__nav">
+                <ul class="nav-list header__nav-list">
+                    <li class="nav-item">
+                        Виды перегородок
+                        <ul class="header__submenu submenu">
+                            <li class="submenu-item"><a class="submenu-link" href="#">Лофт
+                                    перегородки</a></li>
+                            <li class="submenu-item"><a class="submenu-link" href="#">Межкомнатные
+                                    перегородки</a></li>
+                            <li class="submenu-item"><a class="submenu-link" href="#">Раздвижные
+                                    перегородки</a></li>
+                            <li class="submenu-item"><a class="submenu-link" href="#">Офисные
+                                    перегородки</a></li>
+                            <li class="submenu-item"><a class="submenu-link" href="#">Стеклянные
+                                    перегородки</a></li>
+                            <li class="submenu-item"><a class="submenu-link" href="#">Торговые
+                                    перегородки</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">наши работы</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">о нас</a></li>
+                </ul>
+            </nav>
             <div class="header__feedback feedback">
                 <div class="phoneBlock">
                     <a class="feedback-phone" onclick="location.href='tel:79373444041';">+7(937)-344-40-41</a>
@@ -191,7 +214,7 @@
 
     <section id="views" class="views">
         <div class="views__container container">
-            <h3 class="views__title">
+            <h3 class="title views__title">
                 Виды перегородок
             </h3>
             <div class="views__content">
@@ -340,7 +363,7 @@
                             </div>
                             <div class="views__content-card-content">
                                 <h3 class="views__content-card-title">
-                                    Межкомнатные перегородки
+                                    <span> Межкомнатные перегородки</span>
                                 </h3>
                                 <div class="views__content-card-text">
                                     <p>
@@ -434,205 +457,183 @@
             </div>
         </div>
     </section>
-
     <section id="advantages" class="advantages">
-        <div class="container advantages__container">
-            <h3 class="advantages__title">
+        <div class="advantages__container container">
+            <h3 class="title advantages__title aligned-title">
                 Преимущества изделий
             </h3>
             <div class="advantages__content">
                 <ul class="advantages__content-list">
-                    <li class="advantages__content-item">
-                        <div class="advantages__content-img-wrapper">
-                            <img class="advantages__content-img" src="./images/featurebox_photo1.jpg">
+                    <div class="swiper-button-prev advantages__prev">
+                        <img src="images/icons/left-arrow-icon.png" alt="prev">
+                    </div>
+                    <div class="swiper-button-next advantages__next">
+                        <img src="images/icons/right-arrow-icon.png" alt="next">
+                    </div>
+                    <div class="swiper advantages__swiper">
+                        <div class="swiper-wrapper">
+                            <li class="advantages__content-item swiper-slide">
+                                <div class="advantages__content-img-wrapper">
+                                    <img class="advantages__content-img" src="./images/featurebox_photo1.jpg">
+                                </div>
+                                <div class="advantages__content-plus">
+                                    <div class="advantages__content-plus-number">1</div>
+                                    <div class="advantages__content-plus-description">
+                                        <h3 class="advantages__content-plus-title">
+                                            Сохранение открытого пространства
+                                        </h3>
+                                        <p class="advantages__content-plus-text">
+                                            Стеклянные перегородки сохраняют </br>
+                                            объем помещения и создают </br>
+                                            иллюзию полноценного </br>
+                                            зонирования. </br>
+                                            Установка раздвижных перегородок </br>
+                                            дает возможность </br>
+                                            трансформировать помещение в </br>
+                                            зависимости от ситуации, что </br>
+                                            особенно важно для небольшого </br>
+                                            пространства
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="advantages__content-item swiper-slide">
+                                <div class="advantages__content-img-wrapper">
+                                    <img class="advantages__content-img" src="./images/featurebox_photo2.jpg">
+                                </div>
+                                <div class="advantages__content-plus">
+                                    <div class="advantages__content-plus-number">2</div>
+                                    <div class="advantages__content-plus-description">
+                                        <h3 class="advantages__content-plus-title">
+                                            Естественная инсоляция
+                                        </h3>
+                                        <p class="advantages__content-plus-text">
+                                            Основной плюс стекла – </br>
+                                            возможность проникновения света.
+                                        </p>
+                                        <p>
+                                            Стеклянные перегородки в </br>
+                                            помещении с одним окном – еще </br>
+                                            один способ добавить естественный </br>
+                                            свет в темную часть комнаты
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="advantages__content-item swiper-slide">
+                                <div class="advantages__content-img-wrapper">
+                                    <img class="advantages__content-img" src="./images/featurebox_photo3.jpg">
+                                </div>
+                                <div class="advantages__content-plus">
+                                    <div class="advantages__content-plus-number">3</div>
+                                    <div class="advantages__content-plus-description">
+                                        <h3 class="advantages__content-plus-title">
+                                            Контроль запахов
+                                        </h3>
+                                        <p class="advantages__content-plus-text">
+                                            Стеклянные перегородки способны </br>
+                                            задерживать запахи и влагу, что </br>
+                                            особенно актуально при </br>
+                                            зонировании кухни, гостиной, </br>
+                                            спальни или ванной
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="advantages__content-item swiper-slide">
+                                <div class="advantages__content-img-wrapper">
+                                    <img class="advantages__content-img" src="./images/featurebox_photo4.jpg">
+                                </div>
+                                <div class="advantages__content-plus">
+                                    <div class="advantages__content-plus-number">4</div>
+                                    <div class="advantages__content-plus-description">
+                                        <h3 class="advantages__content-plus-title">
+                                            Дизайн на выбор
+                                        </h3>
+                                        <p class="advantages__content-plus-text">
+                                            Различные виды стекла: </br>
+                                            прозрачное, матовое, бронза или </br>
+                                            графит, с декором, узорами и </br>
+                                            пескоструйной обработкой
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="advantages__content-item swiper-slide">
+                                <div class="advantages__content-img-wrapper">
+                                    <img class="advantages__content-img" src="./images/featurebox_photo5.jpg">
+                                </div>
+                                <div class="advantages__content-plus">
+                                    <div class="advantages__content-plus-number">5</div>
+                                    <div class="advantages__content-plus-description">
+                                        <h3 class="advantages__content-plus-title">
+                                            Безопасность и экологичность
+                                        </h3>
+                                        <p class="advantages__content-plus-text">
+                                            Каркас заполняется ударопрочным </br>
+                                            стеклом. Стоит так же отметить </br>
+                                            экологичность и гипоаллергенность
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
                         </div>
-                    </li>
-                    <li class="advantages__content-item">
-                        <div class="advantages__content-plus">
-                            <div class="advantages__content-plus-number">
-                                <h3 class="advantages__content-plus-number-text">
-                                    1
-                                </h3>
-                            </div>
-                            <div class="advantages__content-plus-description">
-                                <h3 class="advantages__content-plus-title">
-                                    Сохранение открытого пространства
-                                </h3>
-                                <p class="advantages__content-plus-text">
-                                    Стеклянные перегородки сохраняют </br>
-                                    объем помещения и создают </br>
-                                    иллюзию полноценного </br>
-                                    зонирования. </br>
-                                    Установка раздвижных перегородок </br>
-                                    дает возможность </br>
-                                    трансформировать помещение в </br>
-                                    зависимости от ситуации, что </br>
-                                    особенно важно для небольшого </br>
-                                    пространства
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="advantages__content-item">
-                        <div class="advantages__content-plus">
-                            <div class="advantages__content-plus-number">
-                                <h3 class="advantages__content-plus-number-text">
-                                    2
-                                </h3>
-                            </div>
-                            <div class="advantages__content-plus-description">
-                                <h3 class="advantages__content-plus-title">
-                                    Естественная инсоляция
-                                </h3>
-                                <p class="advantages__content-plus-text">
-                                    Основной плюс стекла – </br>
-                                    возможность проникновения света. </br>
-                                    Стеклянные перегородки в </br>
-                                    помещении с одним окном – еще </br>
-                                    один способ добавить естественный </br>
-                                    свет в темную часть комнаты
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="advantages__content-item">
-                        <div class="advantages__content-img-wrapper">
-                            <img class="advantages__content-img" src="./images/featurebox_photo2.jpg">
-                        </div>
-                    </li>
-                    <li class="advantages__content-item">
-                        <div class="advantages__content-img-wrapper">
-                            <img class="advantages__content-img" src="./images/featurebox_photo3.jpg">
-                        </div>
-                    </li>
-                    <li class="advantages__content-item">
-                        <div class="advantages__content-plus">
-                            <div class="advantages__content-plus-number">
-                                <h3 class="advantages__content-plus-number-text">
-                                    3
-                                </h3>
-                            </div>
-                            <div class="advantages__content-plus-description">
-                                <h3 class="advantages__content-plus-title">
-                                    Контроль запахов
-                                </h3>
-                                <p class="advantages__content-plus-text">
-                                    Стеклянные перегородки способны </br>
-                                    задерживать запахи и влагу, что </br>
-                                    особенно актуально при </br>
-                                    зонировании кухни, гостиной, </br>
-                                    спальни или ванной
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="advantages__content-item">
-                        <div class="advantages__content-plus">
-                            <div class="advantages__content-plus-number">
-                                <h3 class="advantages__content-plus-number-text">
-                                    4
-                                </h3>
-                            </div>
-                            <div class="advantages__content-plus-description">
-                                <h3 class="advantages__content-plus-title">
-                                    Дизайн на выбор
-                                </h3>
-                                <p class="advantages__content-plus-text">
-                                    Различные виды стекла: </br>
-                                    прозрачное, матовое, бронза или </br>
-                                    графит, с декором, узорами и </br>
-                                    пескоструйной обработкой
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="advantages__content-item">
-                        <div class="advantages__content-img-wrapper">
-                            <img class="advantages__content-img" src="./images/featurebox_photo4.jpg">
-                        </div>
-                    </li>
-                    <li class="advantages__content-item">
-                        <div class="advantages__content-img-wrapper">
-                            <img class="advantages__content-img" src="./images/featurebox_photo5.jpg">
-                        </div>
-                    </li>
-                    <li class="advantages__content-item">
-                        <div class="advantages__content-plus">
-                            <div class="advantages__content-plus-number">
-                                <h3 class="advantages__content-plus-number-text">
-                                    5
-                                </h3>
-                            </div>
-                            <div class="advantages__content-plus-description">
-                                <h3 class="advantages__content-plus-title">
-                                    Безопасность и экологичность
-                                </h3>
-                                <p class="advantages__content-plus-text">
-                                    Каркас заполняется ударопрочным </br>
-                                    стеклом. Стоит так же отметить </br>
-                                    экологичность и гипоаллергенность
-                                </p>
-                            </div>
-                        </div>
-                    </li>
+                    </div>
+
                 </ul>
             </div>
         </div>
     </section>
 
     <section class="arrange">
-        <div class="container arrange__container">
-            <h3 class="arrange__title">
+        <div class="arrange__container container">
+            <h3 class="arrange__title visually-hidden">
                 Как оформить заказ?
             </h3>
             <div class="arrange__process">
                 <ul class="arrange__process-list">
-                    <li class="arrange__process-item">
+                    <li class="arrange__process-item arrange__order">
                         <div class="arrange__process-icons">
-                            <img class="arrange__process-icons-picture" src="./images/icons/measuring-tape.svg">
-                            <img class="arrange__process-icons-arrow" src="./images/icons/move-to-next.svg">
-                            <img class="arrange__process-icons-arrow" src="./images/icons/move-to-next.svg">
-                            <img class="arrange__process-icons-arrow" src="./images/icons/move-to-next.svg">
+                            <img class="arrange__process-icons-picture" src="./images/icons/measuring-tape.png">
                         </div>
                         <h3 class="arrange__process-title">
                             Заявка на замер
                         </h3>
                         <p class="arrange__process-text">
-                            Оставьте заявку на бесплатный выезд замерщика
+                            Оставьте заявку на бесплатный <br> выезд замерщика
                         </p>
                     </li>
-                    <li class="arrange__process-item">
+                    <li class="arrange__process-item arrange__project">
                         <div class="arrange__process-icons">
-                            <img class="arrange__process-icons-picture" src="./images/icons/project.svg">
-                            <img class="arrange__process-icons-arrow" src="./images/icons/move-to-next.svg">
-                            <img class="arrange__process-icons-arrow" src="./images/icons/move-to-next.svg">
-                            <img class="arrange__process-icons-arrow" src="./images/icons/move-to-next.svg">
+                            <img class="arrange__process-icons-picture" src="./images/icons/project.png">
                         </div>
                         <h3 class="arrange__process-title">
                             Проект
                         </h3>
                         <p class="arrange__process-text">
-                            Заключаем договор, утверждаем чертежи и дизайн
+                            Заключаем договор, утверждаем <br> чертежи и дизайн
                         </p>
                     </li>
-                    <li class="arrange__process-item">
+                    <li class="arrange__process-item arrange__manufacture">
                         <div class="arrange__process-icons">
                             <div class="arrange__process-icons">
-                                <img class="arrange__process-icons-picture" src="./images/icons/production.svg">
+                                <img class="arrange__process-icons-picture" src="./images/icons/production.png">
                             </div>
                         </div>
                         <h3 class="arrange__process-title">
                             Производство и монтаж
                         </h3>
                         <p class="arrange__process-text">
-                            Изготавливаем и устанавливаем конструкцию в четко обозначенные сроки
+                            Изготавливаем и устанавливаем конструкцию <br> в четко обозначенные сроки
                         </p>
                     </li>
                 </ul>
             </div>
             <div class="arrange__process-wrapper">
                 <button popup-open="PopupWindow, PopupCallMe" class="arrange__process-btn">
-                    Записаться на замер
+                    Узнать стоимость
                 </button>
             </div>
         </div>
@@ -640,239 +641,281 @@
 
 
     <section id="cases" class="cases">
-        <div class="container cases__container">
-            <h3 class="cases__title">
-                Кейсы клиентов
-            </h3>
+        <div class=" cases__container">
+            <div class="container">
+                <h3 class="title cases__title">
+                    Наши работы
+                </h3>
+            </div>
             <div class="cases__list">
-                <div class="swiper">
+                <div class="cases_navpag">
+                    <div class="container">
+                        <div class="cases__navigation">
+                            <div class="swiper-button-prev cases__prev">
+                                <img src="images/icons/left-arrow-icon.png" alt="prev">
+                            </div>
+                            <div class="swiper-button-next cases__next">
+                                <img src="images/icons/right-arrow-icon.png" alt="next">
+                            </div>
+
+                        </div>
+                        <div class="swiper-pagination cases__pagination"></div>
+                    </div>
+                </div>
+                <div class="swiper cases__swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="cases_block">
+                            <div class="container">
                                 <div class="case">
-                                    <div class="images_block">
-                                        <div class="img_block" style="--case-image: url(../images/cases/case_1-1.jpg);">
-                                            <span>До</span></div>
-                                        <div class="img_block" style="--case-image: url(../images/cases/case_1-2.JPG);">
-                                            <span>После</span></div>
+
+                                    <div class="img_block">
+                                        <img src="images/cases/case_1-1.jpg"
+                                            alt="Разделение гостиную и кухню на функциональные зоны ">
                                     </div>
                                     <div class="text_block">
                                         <h3 class="text_titleCase">
-                                            Задача:
+                                            <span> Задача</span>
                                         </h3>
                                         <p>
                                             Клиент обратился с задачей разделить на функциональные зоны гостиную и
-                                            кухню. Так же было необходимо выдержать общий стиль интерьера
+                                            кухню.
+                                        </p>
+                                        <p>Так же
+                                            было необходимо выдержать общий стиль интерьера
                                         </p>
                                         <h3 class="text_titleCase">
-                                            Межкомнатные перегородки
+                                            <span> Межкомнатные перегородки</span>
                                         </h3>
                                         <p>
                                             Согласовали с клиентом раздвижную перегородку с использованием стального
-                                            профиля, прозрачного закаленного стекла 4 мм и качественной фурнитурой от
-                                            Итальянского производителя.<br>
+                                            профиля,
+                                            прозрачного закаленного стекла 4 мм и качественной фурнитурой от
+                                            Итальянского
+                                            производителя.<br>
                                         </p>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="container">
                                 <div class="case">
-                                    <div class="images_block">
-                                        <div class="img_block" style="--case-image: url(../images/cases/case_2-1.JPG);">
-                                            <span>До</span></div>
-                                        <div class="img_block" style="--case-image: url(../images/cases/case_2-2.jpg);">
-                                            <span>После</span></div>
+                                    <div class="img_block">
+                                        <img src="images/cases/case_2-1.jpg" alt="Нестандартная входная группа">
                                     </div>
                                     <div class="text_block">
                                         <h3 class="text_titleCase">
-                                            Задача:
+                                            <span>Задача</span>:
                                         </h3>
                                         <p>
                                             К нам обратились собственники популярного лаунж-заведения с запросом
-                                            реализовать нестандартную входную группу для своего нового проекта. За
-                                            данную работу никто не хотел и не мог взяться.
+                                            реализовать
+                                            нестандартную входную группу для своего нового проекта. За данную работу
+                                            никто
+                                            не
+                                            хотел и не мог взяться.
 
                                         </p>
                                         <h3 class="text_titleCase">
-                                            Межкомнатные перегородки
+                                            <span> Межкомнатные перегородки</span>
                                         </h3>
                                         <p>
                                             В течение 2х дней проект был согласован и запущен в производство. Монтаж
-                                            произвели через 21 день.
+                                            произвели
+                                            через 21 день.
                                             По ходу работы наши клиенты сделали доп. заказ на декоративные перегородки в
                                             гостевую зону)
                                             Все довольны. Данную работу можете увидеть в лаундж заведение “DOM”
                                         </p>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="cases_block">
+                            <div class="container">
                                 <div class="case">
-                                    <div class="images_block">
-                                        <div class="img_block" style="--case-image: url(../images/cases/case_3-1.JPG);">
-                                            <span>До</span></div>
-                                        <div class="img_block" style="--case-image: url(../images/cases/case_3-2.JPG);">
-                                            <span>После</span></div>
+
+                                    <div class="img_block">
+                                        <img src="images/cases/case_3-1.jpg"
+                                            alt="Разделение рабочего пространства в офисе">
                                     </div>
                                     <div class="text_block">
-                                        <h3 class="text_titleCase">Задача:</h3>
+                                        <h3 class="text_titleCase"><span>Задача</span>:</h3>
                                         <p>Заказчику было необходимо разделить рабочее пространство в офисе, с целью
                                             звукоизоляции и комфортной работы команды</p>
-                                        <h3 class="text_titleCase">Межкомнатные перегородки</h3>
+                                        <h3 class="text_titleCase"><span> Межкомнатные перегородки</span></h3>
                                         <p>Наш специалист в тот же день выехал на замер и по месту предложил различные
-                                            варианты планировки с учетом эргономики. Через 17 дней провели акт
-                                            приема-сдачи. Клиент доволен, эффективность работы команды увеличилась на
-                                            15% - факт)</p>
-                                    </div>
-                                </div>
-                                <div class="case">
-                                    <div class="images_block">
-                                        <div class="img_block" style="--case-image: url(../images/cases/case_4-1.JPG);">
-                                            <span>До</span></div>
-                                        <div class="img_block" style="--case-image: url(../images/cases/case_4-2.jpg);">
-                                            <span>После</span></div>
-                                    </div>
-                                    <div class="text_block">
-                                        <h3 class="text_titleCase">Задача:</h3>
-                                        <p>Для студии йоги необходимо было отделить зону для индивидуальных занятий за
-                                            счет нестандартной перегородки высотой 5 метров и открыванием -
-                                            книжкой<br>За данный проект никто не хотел и не мог взяться</p>
-                                        <h3 class="text_titleCase">Межкомнатные перегородки</h3>
-                                        <p>Для нас это был сложный и одновременно интересный проект, по ходу работы
-                                            возникали сложности. Но наша команда решила данную задачу.<br>Как результат
-                                            все довольны)</p>
+                                            варианты
+                                            планировки с учетом эргономики. Через 17 дней провели акт приема-сдачи.
+                                            Клиент
+                                            доволен, эффективность работы команды увеличилась на 15% - факт)</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="cases_block">
+                            <div class="container">
                                 <div class="case">
-                                    <div class="images_block">
-                                        <div class="img_block" style="--case-image: url(../images/cases/case_5-1.jpg);">
-                                            <span>До</span></div>
-                                        <div class="img_block" style="--case-image: url(../images/cases/case_5-2.JPG);">
-                                            <span>После</span></div>
+
+                                    <div class="img_block">
+                                        <img src="images/cases/case_4-1.jpg" alt="Нестандартной перегородка">
                                     </div>
                                     <div class="text_block">
-                                        <h3 class="text_titleCase">Задача:</h3>
-                                        <p>К нам обратился клиент с запросом установить стеклянные матовые двери для
-                                            офиса. </p>
-                                        <h3 class="text_titleCase">Межкомнатные перегородки</h3>
-                                        <p>Мы с радостью взялись за данный проект, просчитали смету, подготовили
-                                            коммерческое предложение и в течение 20 дней произвели монтаж. <br>Заложили
-                                            полотно толщиной 10 мм и качественную итальянскую фурнитуру</p>
-                                    </div>
-                                </div>
-                                <div class="case">
-                                    <div class="images_block">
-                                        <div class="img_block" style="--case-image: url(../images/cases/case_6-1.JPG);">
-                                            <span>До</span></div>
-                                        <div class="img_block" style="--case-image: url(../images/cases/case_6-2.JPG);">
-                                            <span>После</span></div>
-                                    </div>
-                                    <div class="text_block">
-                                        <h3 class="text_titleCase">Задача:</h3>
-                                        <p>Поступил запрос от нашего партнера-дизайнера на изготовление и монтаж
-                                            цельностеклянной двери в ванную комнату</p>
-                                        <h3 class="text_titleCase">Межкомнатные перегородки</h3>
-                                        <p>С целью экономии пространства и удобного пользования, наш проектный отдел
-                                            предусмотрел дверь - книжку. Как показала практика данное решение очень было
-                                            кстати!<br>Толщина полотна 8 мм, немецкая фурнитура. <br>Как всегда, все
-                                            довольны!</p>
+                                        <h3 class="text_titleCase"><span>Задача</span>:</h3>
+                                        <p>Для студии йоги необходимо было отделить зону для индивидуальных занятий за
+                                            счет
+                                            нестандартной перегородки высотой 5 метров и открыванием - книжкой<br>За
+                                            данный
+                                            проект никто не хотел и не мог взяться</p>
+                                        <h3 class="text_titleCase"><span> Межкомнатные перегородки</span></h3>
+                                        <p>Для нас это был сложный и одновременно интересный проект, по ходу работы
+                                            возникали
+                                            сложности. Но наша команда решила данную задачу.<br>Как результат все
+                                            довольны)
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="swiper-slide">
+                            <div class="container">
+                                <div class="case">
+
+                                    <div class="img_block">
+                                        <img src="images/cases/case_5-1.jpg" alt="Стеклянные матовые двери">
+                                    </div>
+                                    <div class="text_block">
+                                        <h3 class="text_titleCase"><span>Задача</span>:</h3>
+                                        <p>К нам обратился клиент с запросом установить стеклянные матовые двери для
+                                            офиса. </p>
+                                        <h3 class="text_titleCase"><span> Межкомнатные перегородки</span></h3>
+                                        <p>Мы с радостью взялись за данный проект, просчитали смету, подготовили
+                                            коммерческое
+                                            предложение и в течение 20 дней произвели монтаж. <br>Заложили полотно
+                                            толщиной 10
+                                            мм и качественную итальянскую фурнитуру</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-pagination"></div>
                 </div>
             </div>
-        </div>
     </section>
 
-    <section id="workWithDesign" class="wwd">
-        <div class="wwd_content">
-            <h1 class="wwd_title">Работа с дизайнерами</h1>
-            <div class="wwd_contentBox">
-                <div class="row">
-                    <div class="unit">
-                        <div class="unit_img" style="--img-unit: url('../images/icons/profile 1.svg');"></div>
-                        <h3 class="unit_title">Персональный менеджер</h3>
-                        <p class="unit_text">Рассчитаем стоимость
-                            по вашему проекту за 5 минут
-                            Подготовим красивое коммерческое предложение для вашего клиента</p>
-                    </div>
-                    <div class="unit">
-                        <div class="unit_img" style="--img-unit: url('../images/icons/job-description 1.svg');"></div>
-                        <h3 class="unit_title">Работаем по договору</h3>
-                        <p class="unit_text">Работаем по договору
-                            и организуем поставку в срок</p>
-                    </div>
-                    <div class="unit">
-                        <div class="unit_img" style="--img-unit: url('../images/icons/production-_2_ 1.svg');"></div>
-                        <h3 class="unit_title">Собственное производство</h3>
-                        <p class="unit_text">За счет собственного производства реализуем нестандартные изделия
-                            в любом стиле,
-                            а бригада опытных мастеров осуществит монтаж всего
-                            за 1 день
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="unit">
-                        <div class="unit_img" style="--img-unit: url('../images/icons/marketing 1.svg');"></div>
-                        <h3 class="unit_title">Маркетинг</h3>
-                        <p class="unit_text">Для своих партнеров
-                            мы разработали целый комплекс маркетинговых материалов</p>
-                    </div>
-                    <div class="unit">
-                        <div class="unit_img" style="--img-unit: url('../images/icons/offer 1.svg');"></div>
-                        <h3 class="unit_title">Скидки и бонусы</h3>
-                        <p class="unit_text">Предлагаем для вас скидки и бонусы до 20% от стоимости заказа</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="questions">
-        <div class="questions__left">
-            <div class="questions__left-container">
-                <div class="questions__left-wrapper">
-                    <h3 class="questions__left-title">
-                        Остались вопросы?
-                    </h3>
-                    <p class="questions__left-text">
-                        Оставьте свой телефон и мы перезвоним вам
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="questions__right">
-            <div class="questions__right-container">
-                <ul class="questions__right-list send-form">
-                    <li class="questions__right-item">
-                        <input name="username" class="questions__right-input" placeholder="Имя">
+    <section id="reviewes" class="reviewes">
+        <div class="reviewes__container container">
+            <h3 class="title reviewes__title">
+                Отзывы наших клиентов
+            </h3>
+            <div class="swiper reviewes__swiper ">
+                <ul class="swiper-wrapper reviewes__list">
+                    <li class="review swiper-slide">
+                        <div class="review-img">
+                            <img src="images/reviewes/review-1.jpg" alt="отзыв от клиента">
+                        </div>
                     </li>
-                    <li class="questions__right-item">
-                        <input name="phone" class="questions__right-input" placeholder="Телефон">
+                    <li class="review swiper-slide">
+                        <div class="review-img">
+                            <img src="images/reviewes/review-2.jpg" alt="отзыв от клиента">
+                        </div>
                     </li>
-                    <li class="questions__right-item">
-                        <input name="time" class="questions__right-input" placeholder="Удобное время звонка">
+                    <li class="review swiper-slide">
+                        <div class="review-img">
+                            <img src="images/reviewes/review-3.jpg" alt="отзыв от клиента">
+                        </div>
                     </li>
-                    <li class="questions__right-item">
-                        <button class="questions__right-btn btn submit">
-                            Оставить заявку
-                        </button>
+                    <li class="review swiper-slide">
+                        <div class="review-img">
+                            <img src="images/reviewes/review-4.jpg" alt="отзыв от клиента">
+                        </div>
+                    </li>
+                    <li class="review swiper-slide">
+                        <div class="review-img">
+                            <img src="images/reviewes/review-5.jpg" alt="отзыв от клиента">
+                        </div>
                     </li>
                 </ul>
+                <div class="swiper-pagination reviewes__pagination"></div>
             </div>
+            <a href="https://www.instagram.com/pdp_ufa/" class="more-reviewes">
+                <span>Больше отзывов в нашем инстаграме</span>
+                <img src="images/icons/instagram.png" alt="instagram">
+            </a>
         </div>
     </section>
 
+
+    <section class="questions">
+        <div class="questions__container container">
+            <h3 class="title questions__left-title aligned-title">
+                Остались вопросы?
+            </h3>
+            <div class="questions__content">
+                <div class="questions__left">
+                    <div class="questions__left-container">
+
+                        <div class="swiper-button-prev video__prev">
+                            <img src="images/icons/left-arrow-icon.png" alt="prev">
+                        </div>
+                        <div class="swiper-button-next video__next">
+                            <img src="images/icons/right-arrow-icon.png" alt="next">
+                        </div>
+                        <div class="swiper video_swiper">
+                            <ul class="video-list  swiper-wrapper">
+                                <li class="swiper-slide video iframe-wr">
+                                    <iframe class="responsive-iframe" width="853" height="480"
+                                        src="https://www.youtube.com/embed/8nsFqfpcVL4" title="YouTube video player"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </li>
+                                <li class="swiper-slide video iframe-wr">
+                                    <iframe class="responsive-iframe" width="731" height="411"
+                                        src="https://www.youtube.com/embed/CcoQr2AEXWo" title="YouTube video player"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </li>
+                                <li class="swiper-slide video iframe-wr">
+                                    <iframe class="responsive-iframe" width="731" height="411"
+                                        src="https://www.youtube.com/embed/HI8rTNqR1Tw" title="YouTube video player"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="questions__right">
+                    <div class="questions__right-container">
+                        <form class="content form send-form">
+                            <div class="form__descr">
+                                <div class="logo_item">
+                                    <img src="images/icons/logo-main1.svg" alt="pdpufa">
+                                </div>
+                                <h3 class="form__title">Бесплатная консультация <br> со специалистом </h3>
+                            </div>
+                            <div class="form__body">
+                                <div class="inputs_box">
+                                    <input name="username" placeholder="Имя">
+                                    <input name="phone" placeholder="Телефон">
+                                    <input name="time" placeholder="Удобное время звонка">
+                                </div>
+                                <button class="btn-submit">
+                                    оставить заявку
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
 
     <footer class="footer">
         <div class="container footer__container">
@@ -908,57 +951,99 @@
 
     <div class="popup PopupWindow">
         <div class="popup PopupCallMe">
-            <div class="content send-form">
-                <div class="logo_item"></div>
-                <div class="inputs_box">
-                    <input name="username" placeholder="Имя">
-                    <input name="phone" placeholder="Телефон">
-                    <input name="time" placeholder="Удобное время звонка">
+            <form class="content form send-form">
+                <div class="form__descr">
+                    <div class="logo_item">
+                        <img src="images/icons/logo-main1.svg" alt="pdpufa">
+                    </div>
+                    <h3 class="form__title">Заполните форму и узнаете стоимость
+                        всего за пару минут</h3>
                 </div>
-                <button class="btn submit">
-                    Перезвоните мне
-                </button>
-                <div class="desc">
-                    <p>
-                        Нажимая на кнопку, Вы даёте согласие на обработку своих персональных данных и соглашаетесь с <a
-                            target="_blank" href="./politica.html">Пользовательским соглашением</a>
-                    </p>
+                <div class="form__body">
+                    <div class="inputs_box">
+                        <input name="username" placeholder="Имя">
+                        <input name="phone" placeholder="Телефон">
+                        <input name="time" placeholder="Удобное время звонка">
+                    </div>
+                    <button class="btn-submit">
+                        Перезвоните мне
+                    </button>
+                    <div class="desc">
+                        <p>
+                            Нажимая на кнопку, Вы даёте согласие на обработку своих персональных данных и соглашаетесь с
+                            <a target="_blank" href="./politica.html">Пользовательским соглашением</a>
+                        </p>
+                    </div>
                 </div>
                 <div class="button-close">+</div>
-            </div>
+            </form>
         </div>
         <div class="popup PopupPrice">
-            <div class="content send-form">
-                <div class="logo_item"></div>
-                <div class="inputs_box">
-                    <input name="username" placeholder="Имя">
-                    <input name="phone" placeholder="Телефон">
+            <form class="content form send-form">
+                <div class="form__descr">
+                    <div class="logo_item">
+                        <img src="images/icons/logo-main1.svg" alt="pdpufa">
+                    </div>
+                    <h3 class="form__title">Заполните форму и мы отправим для вас каталог</h3>
                 </div>
-                <button class="btn submit">
-                    Рассчитаем стоимость за 5 минут
-                </button>
-                <div class="desc">
-                    <p>
-                        Нажимая на кнопку, Вы даёте согласие на обработку своих персональных данных и соглашаетесь с <a
-                            target="_blank" href="./politica.html">Пользовательским соглашением</a>
-                    </p>
+                <div class="form__body">
+                    <div class="inputs_box">
+                        <input name="username" placeholder="Имя">
+                        <input name="phone" placeholder="Телефон">
+                    </div>
+                    <button class="btn-submit">
+                        получить каталог
+                    </button>
+                    <div class="desc">
+                        <p>
+                            Нажимая на кнопку, Вы даёте согласие на обработку своих персональных данных и соглашаетесь с
+                            <a target="_blank" href="./politica.html">Пользовательским соглашением</a>
+                        </p>
+                    </div>
                 </div>
                 <div class="button-close">+</div>
-            </div>
+            </form>
         </div>
         <div class="popup PopupThanks">
-            <div class="content send-form">
-                <div class="logo_item"></div>
-                <div class="title">Спасибо! Данные успешно отправлены.<br><br>Мы скоро свяжемся с вами</div>
+            <div class="content">
+
+                <div class="popup__body">
+                    <div class="logo_item">
+                        <img src="images/icons/form-logo.png" alt="pdpufa">
+                    </div>
+                    <h3 class="title">Спасибо за заявку!</h3>
+                    <div class="descr">
+                        <p>
+                            Мы перезвоним вам через 5 минут, а пока можете <br>
+                            <a href="#">посмотреть каталог наших работ</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="socialList-c">
+                    <a target="_blank" href='https://www.instagram.com/pdp_ufa/'
+                        class="feedback-link feedback-instagram"></a>
+                    <a target="_blank" class="feedback-link feedback-whatsapp"
+                        href='https://api.whatsapp.com/send?phone=79373444041&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C%2C%20%D1%8F%20%D0%BF%D0%BE%20%D0%BF%D0%BE%D0%B2%D0%BE%D0%B4%D1%83'></a>
+                    <a target="_blank" href="https://t.me/pdpufa" class="feedback-link feedback-telegram"></a>
+                </div>
+
                 <div class="button-close">+</div>
             </div>
         </div>
         <div class="popup PhotoPrew">
-            <div class="button-prev button"></div>
+            <button class="button-prev button  popup-btn">
+                <div class="popup-icon-wr popup__prev">
+                    <img src="images/icons/left-arrow-icon.png" alt="prev">
+                </div>
+            </button>
             <div class="content_box">
                 <div class="button-close">+</div><img>
             </div>
-            <div class="button-next button"></div>
+            <button class="button-next button popup-btn ">
+                <div class="popup-icon-wr popup__next">
+                    <img src="images/icons/right-arrow-icon.png" alt="next">
+                </div>
+            </button>
         </div>
     </div>
     <!-- <div class="feedback"
@@ -971,9 +1056,8 @@
             </button>
 				
         </div> -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
     <!-- Pixel -->
     <script type="text/javascript">
