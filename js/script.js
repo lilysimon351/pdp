@@ -3,12 +3,16 @@
     const viewsSwiper = new Swiper('.views__swiper', {
         speed: 400,
         spaceBetween: 150,
-        navigation: false,
-        pagination: {
-            el: '.views__pagination',
-            type: 'bullets',
-            clickable: true
-        }
+        navigation: {
+            nextEl: '.views__next',
+            prevEl: '.views__prev'
+        },
+        pagination: false
+        // pagination: {
+        //     el: '.views__pagination',
+        //     type: 'bullets',
+        //     clickable: true
+        // }
     });
 
     const advantagesSwiper = new Swiper('.advantages__swiper', {
@@ -55,11 +59,14 @@
         }
     });
 
-    const reviewesSwiper = new Swiper('.reviewes__swiper', {
+    const reviewsSwiper = new Swiper('.reviews__swiper', {
         speed: 400,
-        navigation: false,
+        navigation: {
+            nextEl: '.reviews__next',
+            prevEl: '.reviews__prev'
+        },
         pagination: {
-            el: '.reviewes__pagination',
+            el: '.reviews__pagination',
             type: 'bullets',
             clickable: true
         },
@@ -74,8 +81,6 @@
                 spaceBetween: 0
             },
             1100: {
-
-                centeredSlides: true,
                 spaceBetween: 40,
                 slidesPerView: 3,
             }
