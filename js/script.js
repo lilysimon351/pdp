@@ -3,6 +3,7 @@
     const viewsSwiper = new Swiper('.views__swiper', {
         speed: 400,
         spaceBetween: 150,
+        loop: true,
         navigation: {
             nextEl: '.views__next',
             prevEl: '.views__prev'
@@ -47,6 +48,7 @@
         slidesPerView: 1,
         effect: "fade",
         draggable: true,
+        loop: true,
         fadeEffect: { crossFade: true },
         navigation: {
             nextEl: '.cases__next',
@@ -92,6 +94,7 @@
         speed: 400,
         spaceBetween: 0,
         slidesPerView: 1,
+        loop: true,
         navigation: {
             nextEl: '.video__next',
             prevEl: '.video__prev'
@@ -221,7 +224,7 @@ function prevSlidePrewPhoto() {
 }
 
 function nextSlidePrewPhoto() {
-    index = $('.PopupWindow .PhotoPrew').attr('data-slide');
+    index = Number($('.PopupWindow .PhotoPrew').attr('data-slide'));
     id = $('.PopupWindow .PhotoPrew').attr('data-id');
     countSlide = $('#' + id).find('div').length;
     var nextSlide;
