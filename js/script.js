@@ -31,13 +31,13 @@
                 spaceBetween: 20,
                 pagination: false
             },
-            768: {
+            767: {
                 slidesPerView: 2,
                 spaceBetween: 40
             },
-            1110: {
+            1170: {
                 slidesPerView: 3,
-                spaceBetween: 15
+                spaceBetween: 40
             }
         }
     });
@@ -54,35 +54,46 @@
             nextEl: '.cases__next',
             prevEl: '.cases__prev'
         },
-        pagination: {
-            el: '.cases__pagination',
-            type: 'bullets',
-            clickable: true
+
+        breakpoints: {
+            300: {
+                pagination: false
+            },
+            1170: {
+                pagination: {
+                    el: '.cases__pagination',
+                    type: 'bullets',
+                    clickable: true
+                },
+            }
         }
     });
 
     const reviewsSwiper = new Swiper('.reviews__swiper', {
         speed: 400,
-        navigation: {
-            nextEl: '.reviews__next',
-            prevEl: '.reviews__prev'
-        },
         pagination: {
             el: '.reviews__pagination',
             type: 'bullets',
             clickable: true
         },
 
+        navigation: {
+            nextEl: '.reviews__next',
+            prevEl: '.reviews__prev'
+        },
+
         breakpoints: {
             300: {
                 slidesPerView: 1,
-                spaceBetween: 0,
-            },
-            800: {
+                centeredSlides: true,
+                spaceBetween: 30,
+            },            
+            540: {
                 slidesPerView: 2,
-                spaceBetween: 0
+                spaceBetween: 30,
+                centeredSlides: false,
             },
-            1100: {
+            768: {
                 spaceBetween: 40,
                 slidesPerView: 3,
             }
@@ -116,10 +127,38 @@
             $('body,html').animate({
                 scrollTop: top - 50
             }, 500);
+            showHideMenu();
         } else if ($(this).attr('target') == '_blank') {
 
         }
     });
+
+    $(".header").on("click", ".nav_opened", function (event) {
+        if(event.target === $('.nav_opened')[0]) {
+            showHideMenu();
+        }
+    });
+
+    $('.burger').on('click', showHideMenu);
+    
+    function showHideMenu() {
+        let burger = $('.burger'),
+            nav = $('.header__nav'),
+            header = $('.header'),
+            burgerClassName = 'burger_opened',
+            menuClassName = 'nav_opened',
+            headerClassName = 'expanded-nav';
+        if (burger.hasClass(burgerClassName)) {
+            burger.removeClass(burgerClassName);
+            nav.removeClass(menuClassName);
+            header.removeClass(headerClassName);
+        } else {
+            burger.addClass(burgerClassName);
+            nav.addClass(menuClassName);
+            header.addClass(headerClassName);
+        }
+    }
+
 
     $('*[popup-open]').click(function () {
         popup = $(this).attr('popup-open');
@@ -133,9 +172,7 @@
     });
 
     $('.views__content').on('click', '.swiper-slide-picture', function () {
-        if (document.documentElement.clientWidth > 768) {
             prewStart($(this));
-        }
     });
 
     $('.PopupWindow .PhotoPrew').on('click', '.button', function () {

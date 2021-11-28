@@ -66,7 +66,6 @@ body {
 .visually-hidden {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px);
-    /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
     padding: 0 !important;
     border: 0 !important;
@@ -127,22 +126,22 @@ body {
     padding: 30px 0;
     background-color: transparent;
     color: #404148;
-    z-index: 2;
+    z-index: 11;
     transition: 0.3s;
 }
 .header__container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    position: relative;
+    z-index: 1;
 }
-/* .header-attached {
-    background-color: #404148;
-    padding: 15px;
-} */
 
 .logo-wr {
     display: flex;
     justify-content: flex-start;
+    position: relative;
+    z-index: 1;
 }
 
 .logo {
@@ -167,7 +166,6 @@ body {
 .nav {
     display: flex;
     align-items: center;
-    /* display: none; */
 }
 
 .nav-list {
@@ -232,6 +230,29 @@ body {
 .nav-item:hover .submenu {
     opacity: 1;
     visibility: visible;
+}
+.burger {
+    border-radius: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: 0.3s;
+    outline: none;
+}
+.burger:hover {
+    opacity: 0.7;
+}
+.burger span {
+    width: 35px;
+    height: 3px;
+    background: #ffffff;
+    display: block;
+    margin: 5px;
+}
+.burger_opened {
+    background: rgba(0, 0, 0, 0.3);
 }
 .feedback {
     position: relative;
@@ -355,7 +376,7 @@ body {
     font-family: "Montserrat";
     font-weight: 800;
     font-size: 34.7004px;
-    line-height: 42px;
+    line-height: normal;
     letter-spacing: 0.05em;
 }
 
@@ -366,7 +387,7 @@ body {
     font-family: "Montserrat";
     font-weight: 600;
     font-size: 24px;
-    line-height: 29px;
+    line-height: normal;
     letter-spacing: 0.05em;
 }
 
@@ -467,10 +488,12 @@ body {
 .views {
     display: flex;
     justify-content: center;
-    padding-top: 60px;
+    padding-top: 50px;
     padding-bottom: 25px;
 }
-
+.views__title {
+    margin-bottom: 10px;
+}
 .views__content-list {
     display: flex;
     justify-content: center;
@@ -594,7 +617,7 @@ body {
 .advantages__content-img-wrapper {
     overflow: hidden;
     width: 100%;
-    height: 300px;
+    height: 265px;
     border-radius: 5px;
     margin-bottom: 25px;
 }
@@ -646,12 +669,6 @@ body {
     margin-bottom: 15px;
 }
 
-.advantages__content-list {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-}
-
 .advantages__prev {
     left: -30px;
 }
@@ -661,7 +678,7 @@ body {
 }
 .advantages__next,
 .advantages__prev {
-    top: 175px;
+    top: 155px;
 }
 
 .arrange {
@@ -782,7 +799,7 @@ body {
 .cases__container {
     width: 100%;
     position: relative;
-    padding-top: 30px;
+    padding: 30px 0;
 }
 
 .cases__list {
@@ -793,6 +810,8 @@ body {
 }
 .cases__list .container {
     height: 100%;
+    
+    position: relative;
 }
 .case {
     position: relative;
@@ -986,13 +1005,12 @@ body {
     width: 50%;
     display: flex;
     justify-content: flex-end;
-    padding: 80px 0 60px;
+    padding: 80px 20px 60px;
 }
 
 .questions__left-container {
     max-width: 740px;
     width: 100%;
-    height: 320px;
     border-radius: 6px;
     position: relative;
     background: #fff;
@@ -1065,7 +1083,6 @@ body {
 
 .video__next,
 .video__prev {
-    top: 160px;
     width: 45px;
     height: 45px;
 }
@@ -1245,6 +1262,7 @@ body {
     left: 0;
     z-index: 1000;
     background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
 }
 
 .PopupWindow.visible {
@@ -1254,7 +1272,8 @@ body {
 .PopupWindow  .popup {
     position: relative;
     display: none;
-    width: 555px;
+    max-width: 555px;
+    width: 100%;
     height: auto;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
@@ -1464,495 +1483,4 @@ body {
 .MultiButtonTool.visible .mbt_content {
     opacity: 1;
     transform: translate(0%, -100%);
-}
-
-@media screen and (max-width: 1110px) {
-    .header__btn {
-        display: block;
-        padding-left: 10px;
-        border: 0;
-        background-color: transparent;
-        fill: white;
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-    }
-    .header__nav {
-        display: none;
-    }
-    .header__block {
-        position: relative;
-    }
-    .header__block:hover>.header__nav {
-        display: flex;
-    }
-    .header__nav {
-        position: absolute;
-        top: 40px;
-        background-color: #FFFFFF;
-        border-radius: 20px;
-        padding: 10px;
-        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
-    }
-    .header__nav-list {
-        display: block;
-    }
-    .header__nav-item {
-        padding-top: 10px;
-        white-space: nowrap;
-    }
-    .header__nav-link {
-        color: #404148;
-    }
-    .partitions__title {
-        font-size: 36px;
-    }
-    .partitions__plus-item {
-        padding-top: 15px;
-        font-size: 20px;
-    }
-    .partitions__description {
-        font-size: 24px;
-    }
-    .partitions__btn {
-        font-size: 20px;
-    }
-    .views__container {
-        max-width: 100%;
-    }
-    .views {
-        padding-top: 50px;
-    }
-    .views__title {
-        font-size: 36px;
-    }
-    .views__content-item {
-        width: 50%;
-        max-width: 450px;
-    }
-    .views__btn {
-        font-size: 24px;
-    }
-    .advantages__title {
-        font-size: 36px;
-    }
-    .advantages__content-plus-number-text {
-        font-size: 80px;
-    }
-    .advantages__content-plus-title {
-        font-size: 24px;
-    }
-    .arrange__process-icons-arrow {
-        padding-left: 20px;
-    }
-    .arrange__process-btn {
-        font-size: 24px;
-    }
-    .arrange__title {
-        font-size: 36px;
-    }
-    .videos {
-        padding-top: 50px;
-        padding-bottom: 40px;
-    }
-    .videos__title {
-        font-size: 36px;
-    }
-    .instagram {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-    .instagram__title {
-        font-size: 36px;
-    }
-    .instagram__item {
-        width: calc((100% - 60px) / 2);
-    }
-    .questions__left {
-        padding-right: 15px;
-    }
-    .questions__left-container {
-        max-width: 100%;
-        width: 100%;
-    }
-    .questions__right-container {
-        max-width: 100%;
-    }
-    .questions__right {
-        padding-left: 15px;
-    }
-    .questions__right-list {
-        width: 100%;
-    }
-    .questions__right-btn {
-        font-size: 24px;
-    }
-    .footer {
-        padding: 30px 15px;
-    }
-    .footer__container {
-        width: 100%;
-        flex-wrap: wrap;
-        display: flex;
-    }
-    .footer__logo-wr {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .footer__feedback {
-        padding-top: 20px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .feedback__btn {
-        width: 100px;
-        height: 100px;
-        bottom: 30px;
-        right: 30px;
-    }
-    .wwd_content {
-        width: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-    .wwd_content .wwd_contentBox .row {
-        flex-direction: column;
-        align-items: center;
-    }
-    .wwd_content .wwd_contentBox .unit {
-        margin-bottom: 20px;
-    }
-    .cases__list .swiper {
-        padding: 30px 20px;
-    }
-    .cases__container {
-        width: 100%;
-    }
-    .cases__list .cases_block {
-        flex-direction: column;
-        align-items: center;
-    }
-    .cases__list .cases_block .case {
-        width: 100%;
-    }
-    .cases__title {
-        margin-left: 0;
-    }
-    .cases__list .cases_block .case:first-child {
-        margin-bottom: 40px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .header__feedback {
-        flex-direction: column-reverse;
-    } 
-    .logo-desc {
-        display: none;
-    }
-    .socialDesc {
-        display: none;
-    }
-    .phoneDesc {
-        display: none;
-    }
-    .socialList .socialList-c {
-        margin-bottom: 0;
-    }
-    .socialList {
-        margin: 0 10vw 0 0;
-    }
-    .footer__descLogo {
-        display: none;
-    }
-    .footer_socialDesc {
-        display: none;
-    }
-    .footer_phoneDesc {
-        display: none;
-    }
-    .footer__socialList .footer__socialList-c {
-        margin-bottom: 0;
-    }
-    .footer__socialList {
-        margin: 0 10vw 0 0;
-    }
-    .partitions {
-        padding-top: 90px;
-        padding-bottom: 30px;
-        height: auto;
-        /*box-sizing: border-box;*/
-        background-position: center;
-        align-items: normal;
-    }
-    .header {
-        background-color: #404148;
-        padding: 15px;
-    }
-    .feedback-list {
-        flex-wrap: wrap;
-    }
-    .feedback-item:last-child {
-        padding-top: 5px;
-    }
-    .header__nav-link {
-        font-size: 14px;
-    }
-    .partitions__container {
-        padding: 10px;
-        width: 100%;
-    }
-    .partitions__title {
-        font-size: 20px;
-    }
-    .partitions__titleDesc{
-        font-size: 14px;
-    }
-    .partitions__plus-item {
-        font-size: 16px;
-        line-height: 20px;
-        padding-top: 5px;
-    }
-    .partitions__description {
-        padding-top: 20px;
-        font-size: 16px;
-    }
-    .partitions__btn {
-        margin-top: 20px;
-        padding: 15px 20px;
-        font-size: 16px;
-        line-height: 20px;
-        min-width: 275px;
-    }
-    .partitions__buttonsBlock {
-        flex-direction: column;
-    }
-    .getCatalog {
-        margin-left: 0;
-    }
-    .views {
-        padding-top: 40px;
-        width: 100%;
-    }
-    .views__title {
-        font-size: 24px;
-    }
-    .views__content-item {
-        width: 100%;
-    }
-    .views__content-card-content {
-        padding: 20px;
-    }
-    .views__btn {
-        margin-top: 20px;
-        padding: 15px 20px;
-        font-size: 16px;
-        line-height: 20px;
-    }
-    .advantages__title {
-        font-size: 24px;
-    }
-    .advantages__content-item {
-        width: 100% !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-    .advantages__content-plus-number-text {
-        font-size: 50px;
-    }
-    .advantages__content-img-wrapper {
-        width: 100%;
-    }
-    .arrange__title {
-        font-size: 24px;
-        width: 100%;
-        text-align: center;
-    }
-    .arrange__process-icons-arrow {
-        display: none;
-    }
-    .arrange__process-list {
-        flex-wrap: wrap;
-    }
-    .arrange__process-item {
-        width: 100%;
-        padding: 0px;
-        max-width: 100%;
-        text-align: center;
-        padding-top: 30px;
-    }
-    .arrange__process-item:first-child {
-        padding-top: 0px;
-    }
-    .arrange__process-icons {
-        display: flex;
-        justify-content: center;
-    }
-    .arrange__process-title {
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .arrange__process-text {
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .arrange__process-btn {
-        margin-top: 20px;
-        padding: 15px 20px;
-        font-size: 16px;
-        line-height: 20px;
-    }
-    .videos {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-    .videos__title {
-        font-size: 24px;
-    }
-    .videos__list {
-        flex-wrap: wrap;
-    }
-    .videos__item {
-        width: 100%;
-    }
-    .instagram {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-    .instagram__title {
-        font-size: 24px;
-    }
-    .instagram__item {
-        width: calc((100% - 40px) / 2);
-        margin: 5px;
-    }
-    .questions {
-        flex-wrap: wrap;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    .questions__left {
-        padding: 30px 20px;
-        width: calc(100% - 30px);
-    }
-    .questions__left-wrapper {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .questions__right {
-        width: 100%;
-    }
-    .questions__right-container {
-        margin-left: auto;
-        margin-right: auto;
-        justify-content: center;
-    }
-    .questions__left {
-        border-radius: 20px;
-    }
-    .questions__left-title {
-        font-size: 24px;
-        text-align: center;
-    }
-    .questions__left-text {
-        text-align: center;
-    }
-    .questions__right {
-        padding: 30px 0 0;
-    }
-    .questions__right-item:not(:first-child) {
-        padding-top: 20px;
-    }
-    .questions__right-btn {
-        padding: 15px 20px;
-        font-size: 16px;
-        line-height: 20px;
-    }
-    .questions__right-input {
-        font-size: 16px;
-        line-height: 20px;
-    }
-    .questions__right-input::placeholder {
-        font-size: 16px;
-        line-height: 20px;
-    }
-    .footer__logo-wr {
-        flex-wrap: wrap;
-    }
-    .footer__logo {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .footer__nav {
-        padding-top: 20px;
-    }
-    .footer__nav-list {
-        flex-wrap: wrap;
-    }
-    .footer__nav-item {
-        width: 100%;
-        text-align: center;
-        padding-top: 10px;
-    }
-    .footer__nav-item:first-child {
-        padding-top: 0;
-    }
-    .feedback__btn {
-        width: 75px;
-        height: 75px;
-        bottom: 20px;
-        right: 20px;
-    }
-    .PopupWindow .popup {
-        width: 80%;
-    }
-    .PopupWindow .popup .content {
-        padding: 40px 20px;
-    }
-}
-
-@media screen and (max-height: 700px) {
-    .partitions {
-        height: 700px;
-    }
-    .PopupWindow .popup .logo_item {
-        height: 70px;
-        width: 60px;
-    }
-    .PopupWindow .popup .inputs_box {
-        margin-top: 5px;
-    }
-    .PopupWindow .popup .btn {
-        padding: 15px 0px;
-        margin-top: 25px;
-    }
-    .PopupWindow .popup .desc {
-        margin-top: 25px;
-    }
-    .partitions__title{
-        font-size: 16px;
-    }
-    .partitions__titleDesc{
-        margin-top: 10px;
-    }
-    .partitions__plus{
-        padding-top: 10px;
-    }
-    .partitions__plus-item:nth-child(1):before{
-        width: 30px;
-        height: 30px;
-    }
-    .partitions__plus-item:nth-child(2):before{
-        width: 30px;
-        height: 30px;
-    }
-    .partitions__plus-item:nth-child(3):before{
-        width: 30px;
-        height: 30px;
-    }
 }

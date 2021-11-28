@@ -117,8 +117,9 @@
     <script type="text/javascript" src="https://cdn.envybox.io/widget/cbk.js?wcb_code=9c193872ca9becfbf7945831b75e4367"
         charset="UTF-8" async></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/style.css?v=6">
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css?v=6">
+    <link rel="stylesheet" href="./css/media.css">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -138,7 +139,7 @@
             <nav class="nav header__nav">
                 <ul class="nav-list header__nav-list">
                     <li class="nav-item">
-                        Виды перегородок
+                        <a>Виды перегородок</a> 
                         <ul class="header__submenu submenu">
                             <li class="submenu-item"><a class="submenu-link" href="#">Лофт
                                     перегородки</a></li>
@@ -174,6 +175,11 @@
                     </div>
                 </div>
             </div>
+            <button class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
@@ -498,7 +504,7 @@
                 Преимущества изделий
             </h3>
             <div class="advantages__content">
-                <ul class="advantages__content-list">
+                <div class="advantages__content-list">
                     <div class="swiper-button-prev advantages__prev">
                         <img src="images/icons/left-arrow-icon.png" alt="prev">
                     </div>
@@ -506,7 +512,7 @@
                         <img src="images/icons/right-arrow-icon.png" alt="next">
                     </div>
                     <div class="swiper advantages__swiper">
-                        <div class="swiper-wrapper">
+                        <ul class="swiper-wrapper">
                             <li class="advantages__content-item swiper-slide">
                                 <div class="advantages__content-img-wrapper">
                                     <img class="advantages__content-img" src="./images/featurebox_photo1.jpg">
@@ -619,10 +625,10 @@
                                     </div>
                                 </div>
                             </li>
-                        </div>
+                        </ul>
                     </div>
 
-                </ul>
+                </div>
             </div>
         </div>
     </section>
