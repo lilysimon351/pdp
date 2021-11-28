@@ -409,7 +409,9 @@
     .reviews__swiper {
         max-width: 540px;
     }
-
+    .logo {
+        width: 36px;
+    }
     .partitions__container {
         padding-left: 20px;
         padding-right: 20px;
@@ -531,9 +533,7 @@
 }
 
 @media screen and (max-width: 576px) {
-    .logo {
-        width: 30px;
-    }
+
     .header__feedback {
         flex-direction: column;
     } 
