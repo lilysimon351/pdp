@@ -250,7 +250,7 @@ body {
     height: 3px;
     background: #ffffff;
     display: block;
-    margin: 5px;
+    margin: 5px 0;
 }
 .burger_opened {
     background: rgba(0, 0, 0, 0.3);
@@ -351,6 +351,7 @@ body {
 }
 
 .partitions {
+    background-color: rgba(43, 42, 40, 0.9);
     background-image: url("../images/main-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;

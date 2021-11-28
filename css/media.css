@@ -254,8 +254,6 @@
     .partitions {
         padding-top: 90px;
         padding-bottom: 30px;
-        height: auto;
-        align-items: normal;
     }
 
     .header {
@@ -470,6 +468,7 @@
         float: none;
         justify-content: center;
         margin-top: 10px;
+        font-size: 14px;
     }
 
     .questions__left {
@@ -523,6 +522,12 @@
         font-size: 12px;
         padding: 0 20px;
     }
+    .PopupWindow .PhotoPrew .content_box img {
+        height: auto;
+    }
+    .PopupWindow .PhotoPrew {
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -548,7 +553,7 @@
         visibility: visible;
     }
     .header__feedback  {
-        margin-left: 10px;
+        margin-right: -20px;
     }
     .nav_opened {
         padding-top: 115px;
