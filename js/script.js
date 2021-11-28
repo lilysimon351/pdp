@@ -54,19 +54,11 @@
             nextEl: '.cases__next',
             prevEl: '.cases__prev'
         },
-
-        breakpoints: {
-            300: {
-                pagination: false
-            },
-            1170: {
-                pagination: {
-                    el: '.cases__pagination',
-                    type: 'bullets',
-                    clickable: true
-                },
-            }
-        }
+        pagination: {
+            el: '.cases__pagination',
+            type: 'bullets',
+            clickable: true
+        },
     });
 
     const reviewsSwiper = new Swiper('.reviews__swiper', {
@@ -331,13 +323,13 @@ function send_form(dataForm) {
         },
         success: function (msg) {
             if (msg == true) {
-                window.location.href = "https://pdpufa.ru/thanks.html";
-                /* $('.popup').removeClass('visible');
+                // window.location.href = "https://pdpufa.ru/thanks.html";
+                $('.popup').removeClass('visible');
                 $('.PopupWindow').addClass('visible');
                 $('.PopupWindow .PopupThanks').addClass('visible');
                 setTimeout(function(){
                     $('.popup').removeClass('visible');
-                }, 3000); */
+                }, 3000);
             }
         }
     });

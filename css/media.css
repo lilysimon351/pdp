@@ -30,6 +30,10 @@
         max-width: 960px;
     }
 
+    .cases__pagination {
+        display: none;
+    }
+
     .header__logo-wr .logo-desc {
         display: none;
     }
@@ -615,6 +619,11 @@
 
     .PopupWindow .PhotoPrew {
         height: auto;
+    }
+
+    .callbackkiller.cbk-phone.cbk-phone-pulse {
+        right: 20px !important;
+        bottom: 200px!important;
     }
 }
 

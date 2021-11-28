@@ -1870,7 +1870,3 @@ not all and (min-resolution:.001dpcm) {
     -ms-transform: translate(0%, -100%);
     transform: translate(0%, -100%);
 }
-
-.callbackkiller.cbk-phone.cbk-phone-pulse {
-    right: 40px!important;
-}
