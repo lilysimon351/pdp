@@ -144,7 +144,9 @@
 }
 
 @media screen and (max-width: 980px) {
-
+    .burger {
+        display: block;
+    }
     .container,
     .reviews__swiper {
         max-width: 768px;
