@@ -1061,7 +1061,7 @@ not all and (min-resolution:.001dpcm) {
     align-items: flex-start;
     height: auto;
     width: calc(100% - 360px);
-    min-height: 250px;
+    min-height: 150px;
 }
 
 
@@ -1696,6 +1696,7 @@ not all and (min-resolution:.001dpcm) {
     width: 15%;
     height: 100%;
     z-index: 10;
+    padding: 0;
     background-color: rgba(0, 0, 0, 0.15);
     cursor: pointer;
     -webkit-transition: .3s;
