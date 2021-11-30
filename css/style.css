@@ -182,6 +182,7 @@ body {
     justify-content: flex-start;
     position: relative;
     z-index: 1;
+        text-decoration: none;
 }
 
 .logo {
@@ -294,11 +295,13 @@ body {
 .submenu-link {
     text-transform: none;
 }
-
-.nav-item:hover .submenu {
-    opacity: 1;
-    visibility: visible;
+@media screen and (min-width: 980.99px) {
+    .nav-item:hover .submenu {
+        opacity: 1;
+        visibility: visible;
+    }
 }
+
 
 .burger {
     border-radius: 5px;
@@ -419,15 +422,15 @@ body {
 }
 
 .feedback-instagram {
-    background-image: url("../images/icons/instagram.png");
+    background-image: url("https://pdpufa.ru/images/icons/instagram.png");
 }
 
 .feedback-whatsapp {
-    background-image: url("../images/icons/whatsapp.png");
+    background-image: url("https://pdpufa.ru/images/icons/whatsapp.png");
 }
 
 .feedback-telegram {
-    background-image: url("../images/icons/telegram.png");
+    background-image: url("https://pdpufa.ru/images/icons/telegram.png");
 }
 
 .feedback-link {
@@ -462,7 +465,7 @@ body {
 
 .partitions {
     background-color: rgba(43, 42, 40, 0.9);
-    background-image: url("../images/main-background.jpg");
+    background-image: url("https://pdpufa.ru/images/loft-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -537,15 +540,15 @@ not all and (min-resolution:.001dpcm) {
 }
 
 .partitions__plus-item:nth-child(1):before {
-    background-image: url('../images/icons/pencil-and-ruler.png');
+    background-image: url('https://pdpufa.ru/images/icons/pencil-and-ruler.png');
 }
 
 .partitions__plus-item:nth-child(2):before {
-    background-image: url('../images/icons/tools.png');
+    background-image: url('https://pdpufa.ru/images/icons/tools.png');
 }
 
 .partitions__plus-item:nth-child(3):before {
-    background-image: url('../images/icons/tax-free.png');
+    background-image: url('https://pdpufa.ru/images/icons/tax-free.png');
 }
 
 .partitions__plus-item::before {
@@ -876,7 +879,7 @@ not all and (min-resolution:.001dpcm) {
 }
 
 .arrange {
-    background-image: url("../images/arrange-backgroud.jpg");
+    background-image: url("https://pdpufa.ru/images/arrange-backgroud.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #3b4544;
@@ -927,7 +930,7 @@ not all and (min-resolution:.001dpcm) {
     content: "";
     width: 115px;
     height: 40px;
-    background-image: url(../images/icons/move-to-next.png);
+    background-image: url(https://pdpufa.ru/images/icons/move-to-next.png);
     display: block;
     position: absolute;
     background-size: contain;
@@ -1180,7 +1183,7 @@ not all and (min-resolution:.001dpcm) {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background: #3b4544 url(../images/reviews-bg.jpg) center no-repeat;
+    background: #3b4544 url(https://pdpufa.ru/images/reviews-bg.jpg) center no-repeat;
     background-size: cover;
 }
 
@@ -1277,7 +1280,7 @@ not all and (min-resolution:.001dpcm) {
 
 .questions {
     padding-top: 40px;
-    background: url(../images/questions-bg.jpg) center 140px no-repeat;
+    background: url(https://pdpufa.ru/images/questions-bg.jpg) center 140px no-repeat;
     background-size: cover;
 }
 
@@ -1793,7 +1796,7 @@ not all and (min-resolution:.001dpcm) {
     top: 0;
     left: 0;
     background-color: #fff;
-    background-image: url(../images/icons/call-not-hover.png);
+    background-image: url(https://pdpufa.ru/images/icons/call-not-hover.png);
     background-size: 38px;
     background-position: center;
     background-repeat: no-repeat;
@@ -1806,7 +1809,7 @@ not all and (min-resolution:.001dpcm) {
 
 .MultiButtonTool .mbt_logo:hover {
     background-color: #404148;
-    background-image: url(../images/icons/call-white.png);
+    background-image: url(https://pdpufa.ru/images/icons/call-white.png);
 }
 
 .MultiButtonTool .mbt_content {
@@ -1869,4 +1872,48 @@ not all and (min-resolution:.001dpcm) {
     -webkit-transform: translate(0%, -100%);
     -ms-transform: translate(0%, -100%);
     transform: translate(0%, -100%);
+}
+
+.thanks-page-wr {
+    overflow: hidden;
+}
+.thanks-page {
+    margin:  0;
+    width: 100%;
+    height: 100%;
+    width:  100vw;
+    height:  100vh;
+    background:  url(https://pdpufa.ru/images/thanks-bg.jpg) center no-repeat;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+    padding:  10px;
+}
+
+@media screen and (max-width:  768px) {
+    .PopupThanks .logo_item {
+        width: 110px;
+    }
+    .PopupThanks .title {
+        font-size: 29px;
+        line-height: 29px;
+        display: inline-block;
+    }
+    .PopupThanks .descr {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-height: 600px ) {
+    .thanks-page {
+        min-height: 600px;
+    }
 }

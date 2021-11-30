@@ -105,28 +105,31 @@
         pagination: false
     });
 
-    this.changeHeader();
-
-    window.addEventListener('scroll', () => {
-        this.changeHeader();
-    });
-
-    $("body").on("click", "a", function (event) {
-        if (!$(this).attr('target')) {
+    $("body").on("click", ".nav-item > a", function (event) {
+        if (!$(this).attr('target') && $(this).attr('href') !== undefined) {
             event.preventDefault();
             var id = $(this).attr('href'),
                 top = $(id).offset().top;
             $('body,html').animate({
                 scrollTop: top - 50
-            }, 500);
+            }, 800);
             showHideMenu();
-        } else if ($(this).attr('target') == '_blank') {
-
         }
     });
+    $('.nav-item').on('click', function (){
+        if($(this).find('.submenu').length != 0) {
+            if($(this).hasClass('opened-submenu')) {
+                $(this).removeClass('opened-submenu')
+            } else {
+                $(this).addClass('opened-submenu')
+            }
+        } else {
+            $('.opened-submenu').removeClass('opened-submenu')
+        }
+    })
 
     $(".header").on("click", ".nav_opened", function (event) {
-        if(event.target === $('.nav_opened')[0]) {
+        if(event.target === $('.nav_opened')[0] && event.target !== $('.nav-list')[0]) {
             showHideMenu();
         }
     });
@@ -144,6 +147,7 @@
             burger.removeClass(burgerClassName);
             nav.removeClass(menuClassName);
             header.removeClass(headerClassName);
+            $('.opened-submenu').removeClass('opened-submenu')
         } else {
             burger.addClass(burgerClassName);
             nav.addClass(menuClassName);
@@ -180,33 +184,74 @@
         $(this).parent().parent().parent().removeClass('visible');
     });
 
-    $('.send-form .btn.submit').click(function () {
-        phone = $(this).parent().parent().find('input[name="phone"]').val();
-        username = $(this).parent().parent().find('input[name="username"]').val();
-        time = $(this).parent().parent().find('input[name="time"]').val();
+
+    let phoneInput = $(document).find('input[name="phone"]');
+    phoneInput.on("keypress", function (e) {
+      if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+       return false;
+     }
+    });
+    $('.send-form').on('submit', function (e) {
+        e.preventDefault();
+        phone = $(this).find('input[name="phone"]');
+        username = $(this).find('input[name="username"]');
+        time = $(this).find('input[name="time"]');
         err = 0;
-        if (phone.length < 1) {
+
+        if (isNaN(Number(phone.val())) || phone.val().length < 1) {
             err++;
-            viewErr($(this).parent().find('input[name="phone"]'));
+            viewErr(phone);
+        } else {
+            err--;
         }
-        if (username.length < 1) {
+        if (username.val().length < 1) {
             err++;
-            viewErr($(this).parent().find('input[name="username"]'));
+            viewErr(username);
+        } else {
+            err--;
         }
-        if (err == 0) {
+        if (err < 0) {
             data = {
-                'phone_number': phone,
-                'username': username,
-                'call_time': time
+                'phone_number': Number(phone.val()),
+                'username': username.val(),
+                'call_time': time.val()
             }
-            $(this).parent().parent().find('input[name="phone"]').val('');
-            $(this).parent().parent().find('input[name="username"]').val('');
-            $(this).parent().parent().find('input[name="time"]').val('');
+             setTimeout(function(){
+                   phone.val('');
+                   username.val('');
+                   time.val('');
+                }, 1000);
+
             send_form(data);
         }
     });
 })();
 
+function send_form(dataForm) {
+    $.ajax({
+        type: "POST",
+        url: "mail.php",
+        dataType: "JSON",
+        data: {
+            'action': 'sendEmail',
+            'data': dataForm
+        },
+        success: function (msg) {
+            if (msg == true) {
+                setTimeout(function(){
+                      window.location.href = "https://pdpufa.ru/thanks.html";
+                   }, 1000);
+                
+                // $('.popup').removeClass('visible');
+                // $('.PopupWindow').addClass('visible');
+                // $('.PopupWindow .PopupThanks').addClass('visible');
+                // setTimeout(function(){
+                //     $('.popup').removeClass('visible');
+                // }, 3000);
+            }
+        }
+    });
+}
 $(document).click((e) => {
     path = e.originalEvent.path;
     err = 0;
@@ -287,7 +332,7 @@ function prewStart(block) {
 }
 
 function allPopupClosed(div, e) {
-    var PopupArray = ['PopupCallMe', 'PopupPrice', 'PhotoPrew', 'MultiButtonTool'];
+    var PopupArray = ['PopupCallMe', 'PopupCatalog', 'PopupPrice', 'PhotoPrew', 'MultiButtonTool'];
     var searchPop;
     err = 0;
     e.path.forEach(element => {
@@ -303,34 +348,3 @@ function allPopupClosed(div, e) {
     }
 }
 
-function changeHeader() {
-    let header = document.querySelector(".header");
-    if (pageYOffset > 30) {
-        header.classList.add("header-attached");
-    } else {
-        header.classList.remove("header-attached");
-    }
-}
-
-function send_form(dataForm) {
-    $.ajax({
-        type: "POST",
-        url: "mail.php",
-        dataType: "JSON",
-        data: {
-            'action': 'sendEmail',
-            'data': dataForm
-        },
-        success: function (msg) {
-            if (msg == true) {
-                // window.location.href = "https://pdpufa.ru/thanks.html";
-                $('.popup').removeClass('visible');
-                $('.PopupWindow').addClass('visible');
-                $('.PopupWindow .PopupThanks').addClass('visible');
-                setTimeout(function(){
-                    $('.popup').removeClass('visible');
-                }, 3000);
-            }
-        }
-    });
-}
